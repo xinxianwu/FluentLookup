@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentLookup", "FluentLookup\FluentLookup.csproj", "{6CAAFDC8-BDF6-4167-9CE8-EC5293573F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentLookup.Tests", "FluentLookup.Tests\FluentLookup.Tests.csproj", "{EF8DC193-FB79-4B05-AC8B-85CFD2478EE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CAAFDC8-BDF6-4167-9CE8-EC5293573F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAAFDC8-BDF6-4167-9CE8-EC5293573F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAAFDC8-BDF6-4167-9CE8-EC5293573F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAAFDC8-BDF6-4167-9CE8-EC5293573F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8DC193-FB79-4B05-AC8B-85CFD2478EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8DC193-FB79-4B05-AC8B-85CFD2478EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8DC193-FB79-4B05-AC8B-85CFD2478EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8DC193-FB79-4B05-AC8B-85CFD2478EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
