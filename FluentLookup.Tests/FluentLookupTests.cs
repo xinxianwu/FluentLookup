@@ -45,4 +45,61 @@ public class FluentLookupTests
             }
         );
     }
+
+    [Test]
+    public void key_lookup_try_get_value()
+    {
+        var dictionary = new Dictionary<string, int>()
+        {
+            { "one", 1 },
+            { "two", 2 },
+            { "three", 3 }
+        };
+
+        var isExist = dictionary
+            .BeginKeyLookupChain()
+            .ThenKey("not exist key")
+            .ThenKey("three")
+            .TryGetValue(out var value);
+
+        isExist.Should().BeTrue();
+        value.Should().Be(3);
+    }
+
+    [Test]
+    public void key_lookup_get_value_or_default()
+    {
+        var dictionary = new Dictionary<string, int>()
+        {
+            { "one", 1 },
+            { "two", 2 },
+            { "three", 3 }
+        };
+
+        var value = dictionary
+            .BeginKeyLookupChain()
+            .ThenKey("not exist key")
+            .ThenKey("three")
+            .GetValueOrDefault(0);
+
+        value.Should().Be(3);
+    }
+
+    [Test]
+    public void key_lookup_get_default_value()
+    {
+        var dictionary = new Dictionary<string, int>()
+        {
+            { "one", 1 },
+            { "two", 2 },
+            { "three", 3 }
+        };
+
+        var value = dictionary
+            .BeginKeyLookupChain()
+            .ThenKey("not exist key")
+            .GetValueOrDefault(0);
+
+        value.Should().Be(0);
+    }
 }

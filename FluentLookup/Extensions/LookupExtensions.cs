@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace FluentLookup.Extensions
 {
@@ -25,6 +26,11 @@ namespace FluentLookup.Extensions
         {
             return source
                 .Where(x => !exclusionSet.Contains(selector(x)));
+        }
+
+        public static KeyLookupChain<TKey, TValue> BeginKeyLookupChain<TKey, TValue>(this IDictionary<TKey, TValue> dictionary)
+        {
+            return new KeyLookupChain<TKey, TValue>(dictionary);
         }
     }
 }
